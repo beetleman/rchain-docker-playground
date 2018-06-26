@@ -1,0 +1,9 @@
+version: "2.2"
+
+services:
+  node:
+    image: rchain/rnode
+    command: run --bonds-file /bonds.txt --bootstrap rnode://1e41c699d52a8b54d3577973a13be5e6d97af03a@52.119.8.10:30304 --validator-private-key b65093414fcf8d779a5f6d8f07fc7bc43d83ae6070ae023002582a331c4d88e2
+    volumes:
+      - ./data:/var/lib/rnode
+      - ./bonds.txt:/bonds.txt
