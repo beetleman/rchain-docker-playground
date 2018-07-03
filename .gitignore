@@ -1,2 +1,4 @@
 /data/node*
 /data/rspace
+/data/validators
+/.env
