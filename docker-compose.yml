@@ -3,8 +3,10 @@ version: "2.2"
 services:
   node:
     image: rchain/rnode:dev
-    command: run --data_dir /data --bonds-file /data/bonds.txt --validator-private-key ${PRIVATE_KEY}
     volumes:
       - ./data/:/data
-    ports:
-      - '9095:9095' # prometheus reported
+    network_mode: "host"
+    environment:
+      - PRIVATE_KEY=${PRIVATE_KEY}
+      - BOOTSTRAP=${BOOTSTRAP}
+    command: run --data_dir /data --bonds-file /data/bonds.txt --validator-private-key ${PRIVATE_KEY} --bootstrap ${BOOTSTRAP}
