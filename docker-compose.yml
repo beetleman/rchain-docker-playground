@@ -2,11 +2,14 @@ version: "2.2"
 
 services:
   node:
-    image: rchain/rnode:dev
+    image: rchain/rnode:latest
     volumes:
       - ./data/:/data
+      - ./config/:/config
+      - ./src/:/opt/docker/src
     network_mode: "host"
     environment:
       - PRIVATE_KEY=${PRIVATE_KEY}
       - BOOTSTRAP=${BOOTSTRAP}
-    command: run --data_dir /data --bonds-file /data/bonds.txt --validator-private-key ${PRIVATE_KEY} --bootstrap ${BOOTSTRAP}
+    command: run --data_dir /data --bonds-file /config/bonds.txt --default-timeout 6000 --validator-private-key ${PRIVATE_KEY} -b ${BOOTSTRAP}
+    # command: run --data_dir /data --default-timeout 6000 --validator-private-key ${PRIVATE_KEY} -b ${BOOTSTRAP}
