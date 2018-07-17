@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   node:
-    image: rchain/rnode:latest
+    image: rchain/rnode:dev
     volumes:
       - ./data/:/data
       - ./config/:/config
