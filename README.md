@@ -22,7 +22,7 @@ chmod o+rX src
 docker-compose up node
 ```
 
-## Resting if synchronized
+## Testing if synchronized
 ```shell
 docker-compose exec node bin/rnode show-blocks | less
 ```
