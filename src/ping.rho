@@ -1,8 +1,5 @@
-new PingPong in {
-  contract PingPong(ret) = {
-    for(@value, pong <= ret) {
-      pong!(value)
-    }
-  } |
-  PingPong!(*@"org.proofmedia/PingPong")
+contract @"org.proofmedia/PingPong"(ret) = {
+  for(@value, pong <= ret) {
+    pong!(value)
+  }
 }

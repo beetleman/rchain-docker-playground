@@ -1,0 +1,3 @@
+contract @"org.proofmedia/Echo"(@value, ret) = {
+  ret!(value)
+}
