@@ -1,4 +1,6 @@
 /data/node*
 /data/rspace
 /data/validators
+/data/casper-block-store
 /.env
+/logs
