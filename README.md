@@ -5,7 +5,7 @@ Add private key and bootstrap address `.env`:
 ``` shell
 PRIVATE_KEY=private_key_from_google_spreadsheets
 
-# get from BOOTSTRAP=rnode://f4f20286feebc89d36d11b9e6ad726b6dd3d1490@52.119.8.51:40400
+# get from https://rchain.atlassian.net/wiki/spaces/CORE/pages/501842019/RNode+bootstrap+addresses
 BOOTSTRAP=rnode://url_from_^^^
 ```
 
