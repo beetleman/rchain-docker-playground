@@ -13,7 +13,6 @@ BOOTSTRAP=rnode://url_from_^^^
 
 ``` shell
 chmod o+rwX data -R
-chmod o+rX config -R
 chmod o+rX src
 docker-compose up node
 ```
