@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   node:
-    image: rchain/rnode:dev
+    image: rchain/rnode:latest
     network_mode: "host"
     volumes:
       - ./data/:/data
